@@ -1,0 +1,41 @@
+/* app scss stylesheet */
+@import "variables";
+nav.top-nav {
+  height: 122px;
+  box-shadow: none;
+
+  a.page-title {
+    line-height: 122px;
+    font-size: 48px;
+  }
+}
+
+
+ul.side-nav.fixed li.logo {
+  text-align: center;
+  margin: 32px 0;
+}
+
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+.brand-logo{
+  img {
+    width: auto;
+    height:100%;
+    display: block;
+    margin: auto;
+  }
+
+}
+
+.highlight{
+  background-color: $highlight-color;
+}

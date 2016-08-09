@@ -1,0 +1,36 @@
+<header>
+  <nav class="top-nav">
+    <div class="container">
+      <div class="nav-wrapper"><a class="page-title">Content</a></div>
+    </div>
+  </nav>
+  <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+  <ul id="nav-mobile" class="side-nav fixed" style="transform: translateX(0px);">
+
+    <li class="logo">
+      <a id="logo-container" class="brand-logo">
+        <img src="https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/ZepOxLpAmfMTonGAFgs8MbVyNAGAIEdxwCL0B/w1643-h1740-no/AngularJS-Shield-large.png" />
+      </a>
+    </li>
+
+    <li class="bold" ng-class="vm.state.current.name == 'main.view1'? 'active' : ''"><a ui-sref="main.view1" class="waves-effect waves-teal">View1</a></li>
+    <li class="bold" ng-class="vm.state.current.name == 'main.view2'? 'active' : ''"><a ui-sref="main.view2" class="waves-effect waves-teal">View2</a></li>
+  </ul>
+</header>
+<main>
+  <div class="container">
+    <div >
+      <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <div ui-view></div>
+
+
+      <div>Angular seed app: v<span app-version></span></div>
+
+    </div>
+  </div>
+
+</main>
+
