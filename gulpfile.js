@@ -60,7 +60,7 @@ gulp.task('sass', function(done) {
       .on('end', done);
 })
 
-gulp.task('run', () => {
+gulp.task('run', ['release'], () => {
   gulp.watch(['src/es6/**/*.js'], ['browserify'])
   gulp.watch(['./src/scss/**/*'], ['sass'])
 
