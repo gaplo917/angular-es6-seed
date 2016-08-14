@@ -17,9 +17,14 @@ export class View1Controller {
     controllerAs: 'vm'
   }}
 
-  constructor(){
+  constructor(LocalStorageService){
     console.log("View1 Controller init")
-    this.testMessage = "Test Message for hightlight-color in variables.scss!!!"
+    const count = LocalStorageService.get('count') || 1
+
+    this.localStorageCount = count
+    this.variableScssLocation = '/scss/variables.scss'
+
+    LocalStorageService.set('count', parseInt(count) + 1)
 
   }
 }

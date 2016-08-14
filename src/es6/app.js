@@ -1,8 +1,14 @@
-import * as Controllers from './controllers/index'
+/**
+ * You must import all the separated module into this file
+ * Then browserify will include those modules
+ */
 import versionModule from './components/version/version'
 import controllerModules from './controllers'
 import directivesModules from './directives'
+import serviceModules from './services'
 
+// Get the list of controllers
+import * as Controllers from './controllers/index'
 
 // Declare app level module which depends on views, and components
 angular.module('starter', [
@@ -10,10 +16,12 @@ angular.module('starter', [
   'ui.materialize',
   'starter.controllers',
   'starter.directives',
+  'starter.services',
   'starter.version',
 ])
 .config(function($stateProvider, $urlRouterProvider) {
 
+  // register to ui router
   for(let key of Object.keys(Controllers)){
     const controller = Controllers[key]
     $stateProvider.state(controller.STATE,controller.CONFIG)
