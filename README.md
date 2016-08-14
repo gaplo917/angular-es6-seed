@@ -1,6 +1,6 @@
 # angular-es6-seed — A starter project for AngularJS with ES6 Browserify Babel Sass
 
-TODO
+TODO, Add Test
 
 ## Getting Started
 
@@ -26,6 +26,16 @@ npm install gulp -g
 ```
 gulp run
 ```
-
 It will watch the change of `src/es6/**/*.js` and `src/sass/**/**` and build automatically then live reload.
+
+### Read the gulpFile for more commands to use
+
+For example:
+```
+gulp browserify
+gulp sass
+gulp watch
+gulp release
+```
+
 
